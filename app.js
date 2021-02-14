@@ -15,6 +15,12 @@ const KEY = '15674931-a9d714b6e9d654524df198e00&q';
 
 // show images 
 const showImages = (images) => {
+  if ( images.length == [] ){
+    const errorMessage = document.getElementById("error-message");
+    errorMessage.innerText = "";
+    errorMessage.innerText = "Sorry couldn't found result";
+    toggleSpinner(false);
+  } else {
   imagesArea.style.display = 'block';
   gallery.innerHTML = '';
   // show gallery title
@@ -26,7 +32,7 @@ const showImages = (images) => {
     gallery.appendChild(div)
     toggleSpinner(false);
   })
-
+  }
 }
 
 const toggleSpinner = (show) => {

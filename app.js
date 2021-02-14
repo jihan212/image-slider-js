@@ -18,7 +18,8 @@ const showImages = (images) => {
   if ( images.length == [] ){
     const errorMessage = document.getElementById("error-message");
     errorMessage.innerText = "";
-    errorMessage.innerText = "Sorry couldn't found result";
+    errorMessage.innerText = `Sorry couldn't found result 
+                              Try another search`;
     toggleSpinner(false);
   } else {
   imagesArea.style.display = 'block';
